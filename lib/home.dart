@@ -3,6 +3,7 @@ import 'package:flutter/widgets.dart';
 import 'package:buyer/constants.dart';
 import 'package:buyer/API.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:buyer/splash screen.dart';
 
 
 class Home extends StatefulWidget {
@@ -19,8 +20,11 @@ class _HomeState extends State<Home> {
   @override
   void initState() {
     getProducts();
-    getProducts();
+    setState((){});
+    super.initState();
   }
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -70,14 +74,14 @@ class _HomeState extends State<Home> {
     IconButton(
     icon: Icon(Icons.phone, color: Colors.blue,),
     onPressed: (){
-      launch('tel:'+ Productlist[index][0]);
+      launch('tel: +91'+ Productlist[index][0]);
     }
     ),
     IconButton(
     icon: Icon(
     Icons.email, color:Colors.blue,),
     onPressed: () {
-      launch('mailto:admin@afarm.org?'+ Productlist[index][1]);
+      launch('mailto:$Productlist[index][1]');
     },
 
     ),

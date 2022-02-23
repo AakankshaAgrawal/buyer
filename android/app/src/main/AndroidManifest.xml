@@ -2,7 +2,6 @@
     package="com.example.buyer">
    <application
         android:label="buyer"
-        android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

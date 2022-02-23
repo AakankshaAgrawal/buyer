@@ -1,6 +1,7 @@
 import 'package:buyer/home.dart';
 import 'package:buyer/splash.dart';
 import 'package:flutter/material.dart';
+import 'package:buyer/splash screen.dart';
 
 void main() {
   runApp( MyApp());
@@ -13,7 +14,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      home: Splash()
+        home: Splashscreen()
+      // home: Splash()
     );
   }
 }
