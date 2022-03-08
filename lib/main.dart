@@ -2,6 +2,9 @@ import 'package:buyer/home.dart';
 import 'package:buyer/splash.dart';
 import 'package:flutter/material.dart';
 import 'package:buyer/splash screen.dart';
+import 'package:buyer/profile.dart';
+import 'package:buyer/register.dart';
+import 'package:buyer/login.dart';
 
 void main() {
   runApp( MyApp());
@@ -14,8 +17,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-        home: Splashscreen()
-      // home: Splash()
+        home: Splashscreen(),
+        routes: {Register.route: (context) => Register(), Login.route: (context) => Login(),
+          '/home': (context) => Home(),
+          Profile.route: (context) => Profile(),
+    }
     );
   }
 }

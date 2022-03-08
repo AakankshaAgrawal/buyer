@@ -4,14 +4,20 @@ import 'package:buyer/constants.dart';
 import 'package:buyer/API.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:buyer/splash screen.dart';
+import 'package:ff_navigation_bar/ff_navigation_bar.dart';
+import 'package:buyer/profile.dart';
 
 
 class Home extends StatefulWidget {
+  static String route = 'home';
+
+
   @override
   _HomeState createState() => _HomeState();
 }
 
 class _HomeState extends State<Home> {
+  int selectedIndex = 0;
   APIservice apIservice = APIservice();
 
   getProducts() async {
@@ -128,9 +134,25 @@ class _HomeState extends State<Home> {
     ),);}
 
       ),
-      )
+      ),
 
+        bottomNavigationBar: FFNavigationBar(
 
+    selectedIndex: selectedIndex,
+
+    onSelectTab: (index){
+    setState(() {
+    selectedIndex = index;
+    if (selectedIndex == 0) {
+    Navigator.pushNamed(context, Home.route);
+    }  else if (selectedIndex == 3) {
+    Navigator.pushNamed(context, Profile.route);
+    }
+    });
+    },
+
+    items: items,
+    )
     );
   }
 }

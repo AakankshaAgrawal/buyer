@@ -1,5 +1,7 @@
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:buyer/home.dart';
+import 'package:buyer/login.dart';
+import 'package:buyer/register.dart';
 import 'package:flutter/material.dart';
 import 'package:buyer/API.dart';
 
@@ -31,9 +33,10 @@ class _SplashscreenState extends State<Splashscreen> {
             height: 1000,
           ),
           splashIconSize: double.maxFinite,
-          nextScreen: Home(),
+          nextScreen: Register(),
           splashTransition: SplashTransition.fadeTransition,
         )
     );
   }
+
 }

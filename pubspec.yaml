@@ -40,6 +40,8 @@ dependencies:
   splashscreen:
   url_launcher:
   animated_splash_screen:
+  ff_navigation_bar: ^0.1.5
+  rflutter_alert:
 
 dev_dependencies:
   flutter_test:
