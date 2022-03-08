@@ -18,9 +18,9 @@ class Register extends StatefulWidget {
 class _RegisterState extends State<Register> {
   APIservice apIservice = APIservice();
 
-  // sendRegister() async {
-  //   await apIservice.registerFarmer();
-  // }
+  sendRegister() async {
+    await apIservice.registerBuyer();
+  }
 
   final phonenoController = new TextEditingController();
   final emailController = new TextEditingController();
@@ -162,7 +162,7 @@ class _RegisterState extends State<Register> {
                                 Email = emailController.text;
                                 Password = passwordController.text;
 
-                                // sendRegister();
+                                sendRegister();
                               }},
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(30.0),

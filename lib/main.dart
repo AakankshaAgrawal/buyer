@@ -1,5 +1,4 @@
 import 'package:buyer/home.dart';
-import 'package:buyer/splash.dart';
 import 'package:flutter/material.dart';
 import 'package:buyer/splash screen.dart';
 import 'package:buyer/profile.dart';
@@ -18,10 +17,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
         home: Splashscreen(),
-        routes: {Register.route: (context) => Register(), Login.route: (context) => Login(),
-          '/home': (context) => Home(),
+        routes: {
+        Register.route: (context) => Register(),
+          Login.route: (context) => Login(),
+          Home.route: (context) => Home(),
           Profile.route: (context) => Profile(),
-    }
+    },
     );
   }
 }

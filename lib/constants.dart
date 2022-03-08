@@ -22,4 +22,5 @@ String Name;
 String Email;
 String Password;
 String ValidCredential;
+String Buyer_id;
 String ngrok='https://79d1-203-194-100-241.ngrok.io';

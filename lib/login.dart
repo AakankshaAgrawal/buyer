@@ -11,8 +11,6 @@ import 'dart:async';
 
 
 class Login extends StatefulWidget {
-  Login({Key key, this.title}) : super(key: key);
-  final String title;
   static String route = 'login';
 
   @override
@@ -23,9 +21,9 @@ class _LoginState extends State<Login> {
 
   APIservice apIservice = APIservice();
 
-  // sendLogin() async {
-  //   await apIservice.FarmerLogin();
-  // }
+   sendLogin() async {
+    await apIservice.BuyerLogin();
+   }
 
   final usernameController = new TextEditingController();
   final passwordController = new TextEditingController();
@@ -128,7 +126,15 @@ class _LoginState extends State<Login> {
                               style: TextStyle(color: Colors.white),
                             ),
                             onPressed: (){
-                              // sendLogin();
+                              if (usernameController.text == ""){
+                                _onBasicAlertPressed(
+                                    context, 'Please Enter Username');
+                              }
+                              else if (passwordController.text == ""){
+                                _onBasicAlertPressed(
+                                    context, 'Please Enter Password');
+                              }
+                              sendLogin();
 
                               Timer(Duration(seconds:3),()
                               {
@@ -136,21 +142,10 @@ class _LoginState extends State<Login> {
                                   _onBasicAlertPressed(
                                       context, 'Please Enter Correct Credentials');
                                 }
-                                else if (usernameController.text == ""){
-                                  _onBasicAlertPressed(
-                                      context, 'Please Enter Username');
-                                }
-                                else if (passwordController.text == ""){
-                                  _onBasicAlertPressed(
-                                      context, 'Please Enter Password');
-                                }
                                 else {
-                                  Navigator.pushNamed(context, Profile.route);
+                                  Navigator.pushNamed(context, Home.route);
                                 };
-                                // setState(() {
-                                //   greeting = "Validating Credentials";
 
-                                //});
                               });
 
 
@@ -189,7 +184,11 @@ class _LoginState extends State<Login> {
 
                                 onPressed: () {
                                   //Navigator.pushNamed(context, Register.route);
-                                  Navigator.pushNamed(context, '/home');
+                                  //Navigator.pushNamed(context, '/home');
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(builder: (context) => Register()),
+                                  );
                                 },
                                 shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(30.0),
