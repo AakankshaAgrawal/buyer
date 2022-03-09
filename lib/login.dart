@@ -143,7 +143,7 @@ class _LoginState extends State<Login> {
                                       context, 'Please Enter Correct Credentials');
                                 }
                                 else {
-                                  Navigator.pushNamed(context, Home.route);
+                                  Navigator.pushNamed(context, Profile.route);
                                 };
 
                               });
@@ -183,12 +183,8 @@ class _LoginState extends State<Login> {
                                 ),
 
                                 onPressed: () {
-                                  //Navigator.pushNamed(context, Register.route);
-                                  //Navigator.pushNamed(context, '/home');
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(builder: (context) => Register()),
-                                  );
+                                  Navigator.pushNamed(context, Register.route);
+
                                 },
                                 shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(30.0),

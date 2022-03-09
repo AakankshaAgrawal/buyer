@@ -18,6 +18,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
         home: Splashscreen(),
         routes: {
+        '/register': (context) => Register(),
         Register.route: (context) => Register(),
           Login.route: (context) => Login(),
           Home.route: (context) => Home(),

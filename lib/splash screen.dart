@@ -23,9 +23,9 @@ class Splashscreen extends StatefulWidget {
 class _SplashscreenState extends State<Splashscreen> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        title: 'Clean Code',
-        home: AnimatedSplashScreen(
+    return Scaffold(
+
+        body: AnimatedSplashScreen(
           duration: 3000,
           splash: Image.asset(
             'assets/images/avshesh_logo_final.png',

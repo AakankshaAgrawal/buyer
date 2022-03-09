@@ -163,6 +163,8 @@ class _RegisterState extends State<Register> {
                                 Password = passwordController.text;
 
                                 sendRegister();
+                                Navigator.pushNamed(context, Login.route);
+
                               }},
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(30.0),
